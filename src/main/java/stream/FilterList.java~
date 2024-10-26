@@ -1,0 +1,12 @@
+package stream;
+
+import dto.User;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class FilterList {
+    private void filterList(List<User> users) {
+        List<User> activeUsers = users.stream().filter(usr -> usr.isActive()).collect(Collectors.toList());
+    }
+}
